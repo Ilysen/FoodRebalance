@@ -1,6 +1,8 @@
-# FoodRebalance
+# Food Rebalance
 
 This is a mod for The Long Dark that changes the calorie values of meat and fish to more closely resemble their nutrition in real life. Food items in TLD trend towards being less nutritious in-game than they should be; this is most apparent in rabbits, and most especially fish, some of which are over three times less filling than they would normally be for their size.
+
+It also implements a feature that blocks tool use on opening cans if the player's cooking skill has advanced to a point where they would not lose any calories from smashing open the can instead of using a tool, which potentially saves durability in the long-term instead of using tools when there's no longer a need to do so.
 
 ## Why? Doesn't this make the game a lot easier?
 
@@ -20,13 +22,20 @@ Values were also rounded down in all cases for simplicity's sake, and so we can 
 
 Probably. It should work for fish, because the values that determine their calorie calculation are changed directly. Non-fish items, however, have calorie values assigned directly. It may behave weirdly with meat items in an existing save, but your mileage may vary. You should back up your save just in case.
 
+## I want one part of the mod, but not the other part. Can I do that?
+
+Sure! The mod's settings tab allows you to enable or disable any of the mod's features. You can use the calorie tweaks without the can opening changes, or you can smash open cans without changing the calorie values of any food. Both settings are enabled by default, but you're free to disable either of them as you please.
+
 ## Installation
 
-1. Download and install the latest release of [MelonLoader](https://github.com/HerpDerpinstine/MelonLoader/releases/tag/v0.2.6).
-2. Download `FoodRebalance.dll` from the [latest release](https://github.com/Ilysen/FoodRebalance/releases/latest).
-3. Move `FoodRebalance.dll` into the Mods folder in your TLD install directory.
+This mod requires the [ModSettings](https://github.com/zeobviouslyfakeacc/ModSettings) mod as a prerequisite.
 
-## Calorie Change List
+1. Install the latest version of the [MelonLoader](https://github.com/HerpDerpinstine/MelonLoader/releases/tag/v0.2.6) mod loader.
+2. Download and install the latest release of [ModSettings](https://github.com/zeobviouslyfakeacc/ModSettings).
+3. Download `FoodRebalance.dll` from the [latest release](https://github.com/Ilysen/FoodRebalance/releases/latest).
+4. Move `FoodRebalance.dll` into the Mods folder in your TLD install directory.
+
+## Calorie Edit List
 
 These values are on a per-kilogram basis. Two kg of fish will have twice as many listed calories, and so on.
 

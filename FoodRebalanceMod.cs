@@ -108,6 +108,8 @@ namespace Ilysen.FoodRebalance
 
 		public override void OnApplicationStart()
 		{
+			FoodRebalanceSettings.Instance = new FoodRebalanceSettings();
+			FoodRebalanceSettings.Instance.AddToModSettings("Food Rebalance");
 			Debug.Log($"{InfoAttribute.Name} version {InfoAttribute.Version} loaded.");
 #if FRM_DEBUG
 			MelonLogger.Log($"{InfoAttribute.Name} version {InfoAttribute.Version} loaded.");
