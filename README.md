@@ -1,6 +1,6 @@
 # Food Rebalance
 
-This is a mod for The Long Dark that changes the calorie values of meat and fish to more closely resemble their nutrition in real life. Food items in TLD trend towards being less nutritious in-game than they should be; this is most apparent in rabbits, and most especially fish, some of which are over three times less filling than they would normally be for their size.
+This is a mod for *The Long Dark* that changes the calorie values of meat and fish to more closely resemble their nutrition in real life. Food items in TLD trend towards being less nutritious in-game than they should be; this is most apparent in rabbits, and most especially fish, some of which are over three times less filling than they would normally be for their size.
 
 It also implements a feature that blocks tool use on opening cans if the player's cooking skill has advanced to a point where they would not lose any calories from smashing open the can instead of using a tool, which potentially saves durability in the long-term instead of using tools when there's no longer a need to do so.
 
@@ -12,7 +12,7 @@ Long answer: Mostly for fun. The game is indeed made much easier with this mod, 
 
 ## How'd you get these values?
 
-I used data from the [Alaska Department of Fish and Game](https://www.adfg.alaska.gov/index.cfm?adfg=hunting.eating) where applicable for game meats. For deer, I used the statistics for caribou based on the fact that all deer in The Long Dark have antlers. Wolf meat is currently unchanged from a calorie perspective.
+I used data from the [Alaska Department of Fish and Game](https://www.adfg.alaska.gov/index.cfm?adfg=hunting.eating) where applicable for game meats. For deer, I used the statistics for caribou based on the fact that all deer in *The Long Dark* have antlers. Wolf meat is currently unchanged from a calorie perspective.
 
 For fish, I used the [US Department of Agriculture](https://ndb.nal.usda.gov/fdc-app.html) food data repository to determine the calorie density, and then adjusted that based on the percentage of yield you get from the actual fish when filleting it. Yield data was harder to pin down, so I got it from various different sources. Fish data may not be entirely accurate (since the fish you catch isn't entirely composed of fillets) but it should be better than it currently is.
 
@@ -34,6 +34,10 @@ This mod requires the [ModSettings](https://github.com/zeobviouslyfakeacc/ModSet
 2. Download and install the latest release of [ModSettings](https://github.com/zeobviouslyfakeacc/ModSettings).
 3. Download `FoodRebalance.dll` from the [latest release](https://github.com/Ilysen/FoodRebalance/releases/latest).
 4. Move `FoodRebalance.dll` into the Mods folder in your TLD install directory.
+
+## Legal Stuff
+
+*The Long Dark* is created and owned by Hinterland Studio; I do not own any part of the game. Food Rebalance is licensed under the MIT License.
 
 ## Calorie Edit List
 
