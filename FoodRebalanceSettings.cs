@@ -4,14 +4,23 @@ namespace Ilysen.FoodRebalance
 {
 	internal class FoodRebalanceSettings : JsonModSettings
 	{
+		internal enum CanSmashingMode
+		{
+			Normal,
+			CanOpenerOnly,
+			EfficientSmashing,
+			AlwaysSmash
+		}
+
 		internal static FoodRebalanceSettings Instance;
 
 		[Name("Calorie Rebalance")]
 		[Description("Rebalances calorie values on various food items. WARNING - Do not change while in-game.")]
 		public bool adjustCalories = true;
 
-		[Name("Efficient Can Smashing")]
-		[Description("Whether cans should always be opened without a tool if there's no calorie loss from smashing them open.")]
-		public bool efficientSmashing = true;
+		[Name("Can Opening")]
+		[Description("Changes how canned food items are opened. Default behaviour (Normal) is identical to vanilla. " +
+			"'Efficient Smashing' will always smash open cans as long as there's no calorie loss.")]
+		public CanSmashingMode efficientSmashing = CanSmashingMode.Normal;
 	}
 }

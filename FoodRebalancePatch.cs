@@ -98,14 +98,28 @@ namespace Ilysen.FoodRebalance
 	{
 		private static bool Prefix(Panel_CanOpening __instance)
 		{
-			FoodRebalanceMod.DebugLog("Checking efficient can smashing...");
-			if (FoodRebalanceSettings.Instance.efficientSmashing && GameManager.GetSkillCooking().NoCalorieLossWhenSmashingOpen())
+			FoodRebalanceSettings.CanSmashingMode smashMode = FoodRebalanceSettings.Instance.efficientSmashing;
+			FoodRebalanceMod.DebugLog("Checking can smashing...");
+			if (smashMode == FoodRebalanceSettings.CanSmashingMode.EfficientSmashing && GameManager.GetSkillCooking().NoCalorieLossWhenSmashingOpen() ||
+				smashMode == FoodRebalanceSettings.CanSmashingMode.AlwaysSmash)
 			{
-				FoodRebalanceMod.DebugLog("Can open food item with no tool without losing calories. Smashing open!");
+				FoodRebalanceMod.DebugLog($"Settings inform us to smash the can. Efficient: " +
+					$"{(smashMode == FoodRebalanceSettings.CanSmashingMode.EfficientSmashing).ToString()} Smashing open");
 				__instance.OnSmash();
 				return false; // Skip the rest of the method
 			}
-			FoodRebalanceMod.DebugLog("Cannot open food item with no tool without calorie loss. Opening normally!");
+			if (smashMode == FoodRebalanceSettings.CanSmashingMode.CanOpenerOnly)
+			{
+				if (GameManager.GetInventoryComponent().GetBestGearItemWithName("GEAR_CanOpener") != null)
+				{
+					FoodRebalanceMod.DebugLog("Settings use a can opener only, and we have one. Opening normally");
+					return true;
+				}
+				FoodRebalanceMod.DebugLog("Settings use a can opener only, but we do not have one. Smashing open");
+				__instance.OnSmash();
+				return false;
+			}
+			FoodRebalanceMod.DebugLog("Normal mode, or no logic fell through. Opening normally");
 			return true; // Continue as normal
 		}
 	}

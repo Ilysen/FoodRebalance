@@ -15,8 +15,8 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 [assembly: Guid("4A2D287F-9FC2-46D0-8359-930F893ECF1E")]
 
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyVersion("1.0.2.0")]
+[assembly: AssemblyFileVersion("1.0.2.0")]
 
 [assembly: MelonInfo(typeof(FoodRebalanceMod), "Food Rebalance", "1.0.1", "Ilysen")]
 [assembly: MelonGame("Hinterland", "TheLongDark")]
